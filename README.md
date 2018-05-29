@@ -69,3 +69,30 @@ std::string clean(std::string text)
     return text;
 }
 ```
+
+```C++
+bool check(std::ifstream &file, const std::string fileName)
+{
+    try
+    {
+        if(!file)
+        {
+            throw 20;
+        }
+    }
+    catch(...)
+    {
+        std::cout << fileName << " does not exist" << std::endl;
+        return true;
+    }
+    return false;
+}
+```
+
+```C++
+if(check(fl, fileName))
+{
+    return;
+}
+```
+	
